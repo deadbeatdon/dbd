@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.flixstick" version="1.0.1" name="FlixStick" provider-name="dbd">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.3.0"/>
+        <import addon="script.module.parsedom" version="0.9.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">FlixStick</summary>
+        <description lang="en">Keyword installer</description>
+        <disclaimer lang="en">Flixstick have no control over the content supplied in the keywords, the links are simply indexed to external sources available in the public domain. Please send any DMCA complaints to the relevant website hosting infringing content.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <website>https://www.flixstick.co.uk</website>
+    </extension>
+</addon>
+
+<addon id="script.module.bosh" name="Bosh Module" version="1.0.9" provider-name="dbd">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Bosh</summary>
+	</extension>
+</addon>
+
+<addon id="plugin.video.bosh" version="0.1" name="Bosh" provider-name="dbd">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.bosh" />
+		<import addon="script.bosh.artwork" />
+		<import addon="script.bosh.metadata" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.lambdascrapers" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides></provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Bosh</summary>
+		<description lang="en">Bosh</description>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<news></news>
+	</extension>
+</addon>
+
+<addon id="script.bosh.artwork" version="1.0.2" name="Bosh Artwork" provider-name="dbd">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Bosh Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.bosh.metadata" version="1.0.2" name="Bosh Metadata" provider-name="dbd">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Bosh Addon</summary>
+		<description>Metadata for Bosh are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.flixstick" version="2.0" name="Flixstick Repo - dbd mod" provider-name="dbd">
+	<extension point="xbmc.addon.repository" name="Flixstick repo - dbd mod">
+		<dir>
+        	<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+	        <checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+    	    <datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://github.com/deadbeatdon/dbd/raw/master/zips/addons.xml</info>
+		<checksum>https://github.com/deadbeatdon/dbd/raw/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/deadbeatdon/dbd/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Flixstick Repo - dbd mod</summary>
+		<description>Flixstick repo - dbd mod</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+</addons>
