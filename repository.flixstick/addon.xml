@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.flixstick" version="2.0" name="Flixstick Repo - dbd mod" provider-name="dbd">
+	<extension point="xbmc.addon.repository" name="Flixstick repo - dbd mod">
+		<dir>
+        	<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+	        <checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+    	    <datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://github.com/deadbeatdon/dbd/raw/master/zips/addons.xml</info>
+		<checksum>https://github.com/deadbeatdon/dbd/raw/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/deadbeatdon/dbd/master/zips/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Flixstick Repo - dbd mod</summary>
+		<description>Flixstick repo - dbd mod</description>
+		<platform>all</platform>
+	</extension>
+</addon>
