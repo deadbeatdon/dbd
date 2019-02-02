@@ -68,8 +68,6 @@ if action == None:
     from resources.lib.indexers import navigator
     from resources.lib.modules import cache
 
-    navigator.navigator().root()
-
 elif action == "furkNavigator":
     from resources.lib.indexers import navigator
     navigator.navigator().furk()

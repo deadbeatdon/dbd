@@ -20,21 +20,29 @@ urlSize = ""
 pbUrl   = None
 
 tvdict = {
-    "BBC iplayer" : "ActivateWindow(10025,\"plugin://plugin.video.iplayerwww\",return)",
-    "Crackle" : "ActivateWindow(10025,\"plugin://plugin.video.crackle/?id=shows&mode=99\",return)",
-    "ITV" : "ActivateWindow(10025,\"plugin://plugin.video.itv/?mode=1&name=Shows&url=http://www.itv.com/hub/shows\",return)",
+    "[COLOR lime]UKTV Catchup[/COLOR] - [COLOR white]BBC iplayer[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.iplayerwww\",return)",
+    "[COLOR lime]UKTV Catchup[/COLOR] - [COLOR white]ITV Catchup[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.itv/?mode=1&name=Shows&url=http://www.itv.com/hub/shows\",return)",
+    "[COLOR gold]Browse by[/COLOR] [COLOR white]language[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=tvLanguages\",return)",
+    "[COLOR gold]Browse by[/COLOR] [COLOR white]genre[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=tvGenres\",return)",
+    "[COLOR gold]Browse by[/COLOR] [COLOR white]currently trending (most popular)[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=tvshows&url=popular\",return)",
+    "[COLOR dodgerblue]Search for[/COLOR] [COLOR white]tv show title[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=tvSearch\",return)",
 }
 
 moviedict = {
-    "BBC iplayer" : "ActivateWindow(10025,\"plugin://plugin.video.iplayerwww/?mode=126&url=films\",return)",
-    "Crackle" : "ActivateWindow(10025,\"plugin://plugin.video.crackle/?id=movies&mode=99\",return)",
+    "[COLOR dodgerblue]Search for[/COLOR] [COLOR white]film title[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movieSearch\",return)",
+    "[COLOR dodgerblue]Search for[/COLOR] [COLOR white]name of actor[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=moviePerson\",return)",
+    "[COLOR orange]Browse by[/COLOR] [COLOR white]language[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movieLanguages\",return)",
+    "[COLOR orange]Browse by[/COLOR] [COLOR white]genre[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movieGenres\",return)",
+    "[COLOR orange]Browse by[/COLOR] [COLOR white]year[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movieYears\",return)",
+    "[COLOR orange]Browse by[/COLOR] [COLOR white]oscar winners[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movies&url=oscars\",return)",
+    "[COLOR orange]Browse by[/COLOR] [COLOR white]currently on at the cinema[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movies&url=theaters\",return)",
+    "[COLOR gold]Best of...[/COLOR] [COLOR white]currently trending[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movies&url=popular\",return)",
+    "[COLOR gold]Best of...[/COLOR] [COLOR white]voted best of all time[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movies&url=views\",return)",
+    "[COLOR gold]Best of...[/COLOR] [COLOR white]top grossing of all time[/COLOR]" : "ActivateWindow(10025,\"plugin://plugin.video.bosh/?action=movies&url=boxoffice\",return)",
 }
 
-tvlist = tvdict.keys()
-movielist = moviedict.keys()
-
-# keyword = "Ygj3bKpK"
-# keyword = "66EHj0kz"
+tvlist = sorted(tvdict.keys())
+movielist = sorted(moviedict.keys())
 
 def checkTar (source):
     import tarfile
